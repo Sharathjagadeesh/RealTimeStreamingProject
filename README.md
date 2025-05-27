@@ -95,7 +95,6 @@ nse_top_15_tickers = [
 I will monitor only these 15 NSE stocks in this project. You can modify this as per your needs. You can add more tickers or delete any. You can easily find the ticker name for the said stock online.
 
 ---
----
 
 ## 📈 Example Output
 
