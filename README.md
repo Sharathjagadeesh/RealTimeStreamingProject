@@ -1,7 +1,7 @@
 
-# Real-Time Stock Data Streaming Pipeline 🚀
+# Real-Time Stock Data Streaming Pipeline ⌛📈
 
-This project demonstrates a **real-time data streaming pipeline** using **Apache Beam (Python SDK)**, **Google Pub/Sub**, and **YFinance** to simulate stock market data from the **NSE (National Stock Exchange)**. The pipeline is designed to compute **percentage change** in stock prices over a **fixed time window (5 minutes)** using event-time windowing and stream processing.
+This project demonstrates a **real-time data streaming pipeline** using **Apache Beam (Python SDK)**, **Google Pub/Sub**, and **YFinance** to simulate stock market data from the **NSE (National Stock Exchange)**. The pipeline is designed to compute **percentage change** in stock prices over a **fixed time window of 5 and 10 minutes** using event-time windowing and stream processing.
 
 ---
 
@@ -76,20 +76,18 @@ process_10min.py → Apache Beam Pipeline:
 
 ## 📈 Example Output
 
-Every 5 minutes, Beam emits the percentage change in stock prices like:
+Every 5 minutes, Beam emits the source, percentage change, gain, first_open, last_closed, all_time_high, all_time_low in stock prices like:
 
-```python
-['RELIANCE.NS', 0.8312]
-['TCS.NS', -0.1173]
-['HDFCBANK.NS', 1.0456]
-```
+
+Every 10 minutes, Beam emits the source, percentage change, gain, first_open, last_closed, all_time_high, all_time_low in stock prices like:
 
 ---
 
 ## 🧠 Key Concepts Covered
 
 - ✅ Apache Beam with event-time and fixed windowing
-- ✅ Google Pub/Sub integration with Beam
+- ![TipGIF](https://github.com/user-attachments/assets/594295ad-f5f9-4ea2-9c2b-fd3ed86cf875)
+ Google Pub/Sub integration with Beam
 - ✅ Real-time simulation using historical stock data
 - ✅ Percentage price change calculation
 - ✅ Grouping, sorting, and custom transforms in Beam
