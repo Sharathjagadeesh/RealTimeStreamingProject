@@ -146,6 +146,44 @@ Understanding the output:
 
 ---
 
+## 💡 Real-World Use Cases
+
+- 📊 Stock market monitoring
+- 📉 Real-time price fluctuation alerts (coming soon..!)
+- 🔄 Streaming ETL pipelines
+- 🧮 Tumbling window analytics
+
+---
+
+## 🔮 Future Scope
+
+- I have already deployed this to google dataflow. You can easily deploy it from the command prompt.
+- Deploy the output to a sink like BigQuery for further analysis. For this we need timestamp attribute.
+  We can add the current timestamp when the stock was processed in the `calculate_percentage_change` function inside process_5min.py and process_10min.py
+  
+--- 
+
+**Explore my other projects**
+
+- [Airflow Batch Processing project](https://github.com/Sharathjagadeesh/AirflowBatchProcessingProject.git)
+
+---
+
+## 🙋 Author
+
+**Sharath**  
+Data Engineer | Real-time Streaming Enthusiast  | ETL | Batch Processing
+📫 [LinkedIn Profile](https://www.linkedin.com/in/sharath-j-503382219/)
+
+---
+
+## 📞 Contact Me
+
+- If you like my content or you want to suggest any changes, I would be happy to connect.
+- To connect with my on linkedin, please click [here](https://www.linkedin.com/in/sharath-j-503382219/)
+
+---
+
 ## 📦 Installation & Setup
 
 ### 1. Clone the Repository
@@ -208,37 +246,6 @@ This starts a streaming pipeline that:
 - Groups by stock every 5 minutes and 10 minutes
 - Calculates % price change and other parameters
 - Logs output
-
----
-
-## 💡 Real-World Use Cases
-
-- 📊 Stock market monitoring
-- 📉 Real-time price fluctuation alerts (coming soon..!)
-- 🔄 Streaming ETL pipelines
-- 🧮 Tumbling window analytics
-
----
-
-## 🔮 Future Scope
-
-- I have already deployed this to google dataflow. You can easily deploy it from the command prompt.
-- Deploy the output to a sink like BigQuery for further analysis. For this we need timestamp attribute.
-  We can add the current timestamp when the stock was processed in the `calculate_percentage_change` function inside process_5min.py and process_10min.py
-  
---- 
-
-**Explore my other projects**
-
-- [Airflow Batch Processing project](https://github.com/Sharathjagadeesh/AirflowBatchProcessingProject.git)
-
----
-
-## 🙋 Author
-
-**Sharath**  
-Data Engineer | Real-time Streaming Enthusiast  | ETL | Batch Processing
-📫 [LinkedIn Profile](https://www.linkedin.com/in/sharath-j-503382219/)
 
 ---
 
