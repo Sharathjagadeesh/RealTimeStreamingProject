@@ -1,7 +1,12 @@
 
 # Real-Time Stock Data Streaming Pipeline ⌛📈
 
-This project demonstrates a **real-time data streaming pipeline** using **Apache Beam (Python SDK)**, **Google Pub/Sub**, and **YFinance** to simulate stock market data from the **NSE (National Stock Exchange)**. The pipeline is designed to compute **percentage change** in stock prices over a **fixed time window of 5 and 10 minutes** using event-time windowing and stream processing. Every 5 and 10 minutes after the start, the pipeline outputs the data repeatedly for the said windows. I have selected only 15 top NSE stocks whose details are listed below.
+This project demonstrates a **real-time data streaming pipeline** using **Apache Beam (Python SDK)**, **Google Pub/Sub**, and **YFinance** to simulate stock market data from the **NSE (National Stock Exchange)**.
+
+The pipeline is designed to compute the **percentage change** in stock prices over **fixed time windows of 5 and 10 minutes** using event-time windowing and stream processing. Every 5 and 10 minutes after the start, the pipeline outputs the computed data for the respective windows.
+
+Only the **top 15 NSE stocks** have been selected for this project. Their details are listed in the following sections.
+
 
 ---
 
