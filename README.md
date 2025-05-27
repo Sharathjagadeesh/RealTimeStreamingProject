@@ -7,7 +7,7 @@ This project demonstrates a **real-time data streaming pipeline** using **Apache
 
 ## 📌 Project Overview
 
-- **Source**: YFinance API (mocked real-time using historical stock data).
+- **Source**: YFinance API.
 - **Ingestion**: Google Cloud Pub/Sub.
 - **Stream Processor**: Apache Beam with event-time and fixed windows.
 - **Sink**: Console output (for simulation/demo purposes).
@@ -59,7 +59,10 @@ process_5min.py → Apache Beam Pipeline:
     - Compute percentage price change
         ↓
     Output to console
-	
+
+
+Google Cloud Pub/Sub Topic
+        ↓
 process_10min.py → Apache Beam Pipeline:
     - Decode and parse rows
     - Extract necessary columns
@@ -183,7 +186,7 @@ gcloud pubsub subscriptions create RealTimeStreamingProject-sub --topic=RealTime
 python publisher.py
 ```
 
-This sends simulated stock data every 30 seconds to the Pub/Sub topic.
+This sends simulated stock data every 60 seconds to the Pub/Sub topic.
 
 ### Step 2: Start the Beam Pipeline
 
