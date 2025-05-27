@@ -221,6 +221,7 @@ This starts a streaming pipeline that:
 - Deploy the output to a sink like BigQuery for further analysis. For this we need timestamp attribute.
   We can add the current timestamp when the stock was processed in the `calculate_percentage_change` function inside process_5min.py and process_10min.py
   
+--- 
 
 **Explore my other projects**
 
