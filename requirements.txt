@@ -1,0 +1,5 @@
+apache-beam[gcp]==2.54.0
+yfinance==0.2.37
+pandas==2.2.2 # Optional: Useful if we want to output to an excel file.
+google-cloud-pubsub==2.21.0
+protobuf==4.25.3
