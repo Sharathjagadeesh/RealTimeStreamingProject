@@ -215,6 +215,13 @@ This starts a streaming pipeline that:
 
 ---
 
+## 🔮 Future Scope
+
+- I have already deployed this to google dataflow. You can easily deploy it from the command prompt.
+- Deploy the output to a sink like BigQuery for further analysis. For this we need timestamp attribute.
+  We can add the current timestamp when the stock was processed in the `calculate_percentage_change` function inside process_5min.py and process_10min.py
+  
+
 **Explore my other projects**
 
 - [Airflow Batch Processing project](https://github.com/Sharathjagadeesh/AirflowBatchProcessingProject.git)
