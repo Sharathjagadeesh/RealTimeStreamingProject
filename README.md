@@ -207,7 +207,7 @@ This starts a streaming pipeline that:
 
 **Sharath**  
 Data Engineer | Real-time Streaming Enthusiast  | ETL | Batch Processing
-📫 [LinkedIn Profile]([https://linkedin.com/in/yourprofile](https://www.linkedin.com/in/sharath-j-503382219/))
+📫 [LinkedIn Profile](https://www.linkedin.com/in/sharath-j-503382219/)
 
 ---
 
