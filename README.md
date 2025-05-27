@@ -104,10 +104,14 @@ Publisher output:
 
 
 Every 5 minutes, Beam emits the source, percentage change, gain, first_open, last_closed, all_time_high, all_time_low in stock prices like:
+
 ![image](https://github.com/user-attachments/assets/5a5d2d6e-a425-4dec-872c-09312abee6d6)
 
 
 Every 10 minutes, Beam emits the source, percentage change, gain, first_open, last_closed, all_time_high, all_time_low in stock prices like:
+
+![image](https://github.com/user-attachments/assets/79958f07-0c78-46db-aa1b-10632ffb9f39)
+
 
 ---
 
