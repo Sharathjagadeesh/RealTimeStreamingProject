@@ -1,0 +1,17 @@
+| Company Name                        | Yahoo Finance Ticker |
+| ----------------------------------- | -------------------- |
+| Reliance Industries Ltd             | `RELIANCE.NS`        |
+| Tata Consultancy Services Ltd (TCS) | `TCS.NS`             |
+| HDFC Bank Ltd                       | `HDFCBANK.NS`        |
+| ICICI Bank Ltd                      | `ICICIBANK.NS`       |
+| Hindustan Unilever Ltd              | `HINDUNILVR.NS`      |
+| Infosys Ltd                         | `INFY.NS`            |
+| State Bank of India (SBI)           | `SBIN.NS`            |
+| Bharti Airtel Ltd                   | `BHARTIARTL.NS`      |
+| Sun Pharmaceutical                  | `SUNPHARMA.NS`       |
+| ITC Ltd                             | `ITC.NS`             |
+| Bajaj Finance Ltd                   | `BAJFINANCE.NS`      |
+| Kotak Mahindra Bank Ltd             | `KOTAKBANK.NS`       |
+| Larsen & Toubro Ltd (L\&T)          | `LT.NS`              |
+| Axis Bank Ltd                       | `AXISBANK.NS`        |
+| Asian Paints Ltd                    | `ASIANPAINT.NS`      |
