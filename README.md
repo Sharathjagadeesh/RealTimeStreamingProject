@@ -1,7 +1,7 @@
 
 # Real-Time Stock Data Streaming Pipeline ⌛📈
 
-This project demonstrates a **real-time data streaming pipeline** using **Apache Beam (Python SDK)**, **Google Pub/Sub**, and **YFinance** to simulate stock market data from the **NSE (National Stock Exchange)**. The pipeline is designed to compute **percentage change** in stock prices over a **fixed time window of 5 and 10 minutes** using event-time windowing and stream processing.
+This project demonstrates a **real-time data streaming pipeline** using **Apache Beam (Python SDK)**, **Google Pub/Sub**, and **YFinance** to simulate stock market data from the **NSE (National Stock Exchange)**. The pipeline is designed to compute **percentage change** in stock prices over a **fixed time window of 5 and 10 minutes** using event-time windowing and stream processing. Every 5 and 10 minutes after the start, the pipeline outputs the data repeatedly for the said windows. I have selected only 15 top NSE stocks whose details are listed below.
 
 ---
 
@@ -31,11 +31,11 @@ This project demonstrates a **real-time data streaming pipeline** using **Apache
 ```
 RealTimeStreamingProject/
 │
-├── pubsub_publisher.py              # Publishes stock data to Pub/Sub every 30s
-├── process_5min.py                  # Beam pipeline to process and window the stream
-├── requirements.txt                 # Python dependencies
-├── demo1-454518-XXXXXXX.json        # GCP service account credentials
-├── utils/                           # Any helper functions (optional)
+├── publisher.py                     		# Publishes stock data to Pub/Sub every 30s
+├── process_5min.py                  		# Beam pipeline to process and window the stream (every 5 minutes)
+├── process_10min.py                  		# Beam pipeline to process and window the stream (every 10 minutes)
+├── requirements.txt                 		# Python dependencies
+├── GoogleApplicationCreadentialsFile.json      # GCP service account credentials
 └── README.md                        # Project documentation
 ```
 
@@ -70,12 +70,42 @@ process_10min.py → Apache Beam Pipeline:
         ↓
     Output to console
 ```
+---
+## Top 15 NSE stocks list
 
+```
+nse_top_15_tickers = [
+    "RELIANCE.NS",
+    "TCS.NS",
+    "HDFCBANK.NS",
+    "ICICIBANK.NS",
+    "HINDUNILVR.NS",
+    "INFY.NS",
+    "SBIN.NS",
+    "BHARTIARTL.NS",
+    "SUNPHARMA.NS",
+    "ITC.NS",
+    "BAJFINANCE.NS",
+    "KOTAKBANK.NS",
+    "LT.NS",
+    "AXISBANK.NS",
+    "ASIANPAINT.NS"
+]
+```
+I will monitor only these 15 NSE stocks in this project. You can modify this as per your needs. You can add more tickers or delete any. You can easily find the ticker name for the said stock online.
+
+---
 ---
 
 ## 📈 Example Output
 
+Publisher output:
+
+![image](https://github.com/user-attachments/assets/cc686043-a710-40e9-b8d0-04b0eb2b59e1)
+
+
 Every 5 minutes, Beam emits the source, percentage change, gain, first_open, last_closed, all_time_high, all_time_low in stock prices like:
+![image](https://github.com/user-attachments/assets/5a5d2d6e-a425-4dec-872c-09312abee6d6)
 
 
 Every 10 minutes, Beam emits the source, percentage change, gain, first_open, last_closed, all_time_high, all_time_low in stock prices like:
@@ -116,7 +146,7 @@ Ensure your **Google Cloud service account JSON** key is in the project director
 
 ```python
 # Inside process_5min.py
-os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = "demo1-454518-XXXXXXX.json"
+os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = "file_name.json"
 ```
 
 ### 4. Create Pub/Sub Topic & Subscription
@@ -135,7 +165,7 @@ gcloud pubsub subscriptions create RealTimeStreamingProject-sub --topic=RealTime
 ### Step 1: Start the Publisher
 
 ```bash
-python pubsub_publisher.py
+python publisher.py
 ```
 
 This sends simulated stock data every 30 seconds to the Pub/Sub topic.
@@ -146,10 +176,14 @@ This sends simulated stock data every 30 seconds to the Pub/Sub topic.
 python process_5min.py
 ```
 
+```bash
+python process_10min.py
+```
+
 This starts a streaming pipeline that:
 - Processes every message from the subscription
-- Groups by stock every 5 minutes
-- Calculates % price change
+- Groups by stock every 5 minutes and 10 minutes
+- Calculates % price change and other parameters
 - Logs output
 
 ---
@@ -163,19 +197,17 @@ This starts a streaming pipeline that:
 
 ---
 
-## 🙋 Author
-
-**Sharath**  
-Data Engineer | Real-time Streaming Enthusiast  | ETL | Batch Processing
-📫 [LinkedIn Profile]([https://linkedin.com/in/yourprofile](https://www.linkedin.com/in/sharath-j-503382219/))
-
----
-
 **Explore my other projects**
 
 - [Airflow Batch Processing project](https://github.com/Sharathjagadeesh/AirflowBatchProcessingProject.git)
 
 ---
+
+## 🙋 Author
+
+**Sharath**  
+Data Engineer | Real-time Streaming Enthusiast  | ETL | Batch Processing
+📫 [LinkedIn Profile]([https://linkedin.com/in/yourprofile](https://www.linkedin.com/in/sharath-j-503382219/))
 
 ---
 
