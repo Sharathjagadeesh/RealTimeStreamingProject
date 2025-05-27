@@ -21,9 +21,8 @@ This project demonstrates a **real-time data streaming pipeline** using **Apache
 |---------------------|-------------------------------|
 | Stream Ingestion     | Google Pub/Sub                 |
 | Processing Engine    | Apache Beam (Python SDK)       |
-| Data Source          | YFinance API (simulated)       |
+| Data Source          | YFinance API                   |
 | Cloud Environment    | Google Cloud Platform (GCP)    |
-| Optional Deployment  | Google Cloud Dataflow          |
 
 ---
 
@@ -85,13 +84,12 @@ Every 10 minutes, Beam emits the source, percentage change, gain, first_open, la
 
 ## 🧠 Key Concepts Covered
 
-- ✅ Apache Beam with event-time and fixed windowing
-- ![TipGIF](https://github.com/user-attachments/assets/594295ad-f5f9-4ea2-9c2b-fd3ed86cf875)
- Google Pub/Sub integration with Beam
-- ✅ Real-time simulation using historical stock data
-- ✅ Percentage price change calculation
-- ✅ Grouping, sorting, and custom transforms in Beam
-- ✅ Streaming pipeline ready for GCP Dataflow
+- ⭐ Apache Beam with event-time and fixed windowing
+- ⭐ Google Pub/Sub integration with Beam
+- ⭐ Real-time simulation using historical stock data
+- ⭐ Percentage price change calculation
+- ⭐ Grouping, sorting, and custom transforms in Beam
+- ⭐ Streaming pipeline ready for GCP Dataflow
 
 ---
 
@@ -156,40 +154,31 @@ This starts a streaming pipeline that:
 
 ---
 
-## 🌐 Optional: Deploy to Google Cloud Dataflow
-
-Set your GCP project, region, and storage:
-
-```bash
-python process_5min.py \
-  --runner DataflowRunner \
-  --project=demo1-454518 \
-  --region=us-central1 \
-  --temp_location=gs://your-bucket/tmp \
-  --staging_location=gs://your-bucket/staging
-```
-
----
-
 ## 💡 Real-World Use Cases
 
 - 📊 Stock market monitoring
-- 📉 Real-time price fluctuation alerts
+- 📉 Real-time price fluctuation alerts (coming soon..!)
 - 🔄 Streaming ETL pipelines
-- 🧮 Sliding or tumbling window analytics
-
----
-
-## 📃 License
-
-This project is licensed under the MIT License. See `LICENSE` for details.
+- 🧮 Tumbling window analytics
 
 ---
 
 ## 🙋 Author
 
-**[Your Name]**  
-Data Engineer | Real-time Streaming Enthusiast  
-📫 [LinkedIn Profile](https://linkedin.com/in/yourprofile)
+**Sharath**  
+Data Engineer | Real-time Streaming Enthusiast  | ETL | Batch Processing
+📫 [LinkedIn Profile]([https://linkedin.com/in/yourprofile](https://www.linkedin.com/in/sharath-j-503382219/))
+
+---
+
+**Explore my other projects**
+
+- [Airflow Batch Processing project](https://github.com/Sharathjagadeesh/AirflowBatchProcessingProject.git)
+
+---
+
+---
+
+**Thank you for reading!**
 
 ---
