@@ -119,8 +119,8 @@ Understanding the output:
 | Source              | The ticker name or the stock name                                    |
 | Percentage change   | Percentage change over the past 5 or 10 minutes                      |
 | Gain                | If percentage change is positive then gain is True else False        |
-| First open          | Stock openining value for the window ( 5 or 10 minute window)        |
-| Last closed         | Stock closing value for the window ( 5 or 10 minute window)          |
+| First open          | Stock openining value for that window ( 5 or 10 minute window)       |
+| Last closed         | Stock closing value for that window ( 5 or 10 minute window)         |
 | All time high       | All time high for that particluar window ( 5 or 10 minute window)    |
 | All time low        | All time low for that particluar window ( 5 or 10 minute window)     |
 
