@@ -114,7 +114,7 @@ process_data = (
     | "Apply window for 5 minutes" >> beam.WindowInto(FixedWindows(60 * 5), trigger= AfterWatermark(), accumulation_mode=AccumulationMode.DISCARDING, allowed_lateness=0)
     | beam.GroupByKey()
     # | "print" >> beam.Map(printing) # for debug
-    | "Caluclate the percentage change over the past 10 minutes" >> beam.Map(calculate_percentage_change)
+    | "Caluclate the percentage change over the past 5 minutes" >> beam.Map(calculate_percentage_change)
     | "print" >> beam.Map(printing)
 
 )
