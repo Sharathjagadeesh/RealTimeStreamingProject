@@ -34,7 +34,7 @@ nse_top_15_tickers = [
 ]
 
 
-cnt_mins_seconds = 670
+cnt_mins_seconds = 670 # Only tracks data upto 11 minutes and 10 seconds, please replace with the desired number of seconds or use while(1)
 intial = 1
 
 
