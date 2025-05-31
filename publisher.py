@@ -35,6 +35,7 @@ nse_top_15_tickers = [
 
 
 cnt_mins_seconds = 670 # Only tracks data upto 11 minutes and 10 seconds, please replace with the desired number of seconds or use while(1)
+# Important note: Using while(1) could send multiple GET requests, which can be concerning. To simulate and test the data 670 seconds is more than enough in most of the cases. 
 intial = 1
 
 
